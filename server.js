@@ -6,6 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 /// middleware
+app.use(express.json()); // to parse req stream coming in json
 app.use("/api/contacts", require("./routes/contactRoutes"));
 
 app.listen(port, () => {
