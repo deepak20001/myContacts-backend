@@ -38,7 +38,7 @@ const errorHandler = (err, req, res, next) => {
             });
             break;
         default:
-            console.log('No error, All working fine!');
+            console.log(err);
             break;
     }
 };
