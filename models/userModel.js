@@ -10,12 +10,13 @@ const userSchema = mongoose.Schema({
         required: [true, "Please add the user email address"],
         unique: [true, "Email address already taken"],
     },
-    username: {
+    password: {
         type: String,
         required: [true, "Please add the user password"],
     },
 }, {
-    timeStamps: true,
-});
+    timestamps: true,
+}
+);
 
 module.exports = mongoose.model("User", userSchema);
